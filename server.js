@@ -48,6 +48,6 @@ app.post('/image', (req, res) => {
   image.handleApi(req, res);
 });
 
-app.listen(3000, () => {
-  console.log('Server running in port 3000');
+app.listen(process.env.PORT || 3000, () => {
+  console.log(`Server running in port ${process.env.PORT}`);
 });
